@@ -12,9 +12,6 @@ func gridTraveler(n int64, m int64) int64 {
 	if (n == 0 || m == 0){
 		return 0
 	}
-	// if _, ok := memo[n]; !ok {
-	// 	memo[n] = fibonacci(n-1, memo) + fibonacci(n-2, memo)
-	// }
 
 	return gridTraveler(n-1,m) + gridTraveler(n,m-1)
 }
@@ -32,7 +29,7 @@ func main() {
 
 	// Calculate the elapsed time in milliseconds
 	elapsedTimeMs := time.Since(startTime).Milliseconds()
-
+//testing
 	fmt.Printf("For %d by %d grid number of ways: %d \n", n,m,result)
 	fmt.Printf("Execution time: %d ms\n", elapsedTimeMs)
 }
